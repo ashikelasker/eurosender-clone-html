@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+// Global Design
+@import "global/_global";
+
+//media screen
+
+@import "global/mixins";
+
+// btn
+@import "sections/btn";
+
+// header
+@import "sections/_header";
+
+// work
+@import "sections/work-section";
+
+// company
+@import "sections/company";
+
+// Footer
+@import "sections/footer";

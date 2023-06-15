@@ -1,0 +1,245 @@
+.extra-margin {
+  margin-top: 300px;
+}
+.section-padding {
+  padding: 40px 0;
+
+  @include md-screen {
+    padding: 60px 0;
+  }
+  @include xl-screen {
+    padding: 120px 0;
+  }
+  .blue {
+    color: var(--primary-color);
+  }
+}
+
+//  work section //
+.work {
+  &-title {
+    h2 {
+      font-size: 40px;
+      padding: 0 20px;
+      font-weight: 600;
+      color: #141415;
+    }
+  }
+  .margin-top {
+    margin-top: 30px;
+  }
+  .cards {
+    max-width: 250px;
+    padding: 0;
+    margin: 10px 15px;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      margin: 16px 0 24px;
+      margin-bottom: 24px;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 150%;
+      text-align: center;
+    }
+  }
+
+  .work-btn {
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-color);
+  }
+}
+
+//  registered section //
+
+.registered {
+  &-title {
+    margin-bottom: 80px;
+    .title {
+      font-weight: 600;
+      line-height: 120%;
+      color: #141415;
+      text-align: center;
+    }
+    .title-2 {
+      background-color: #00d18a;
+      color: #fff;
+      border-radius: 24px;
+      padding: 4px 16px 4px 12px;
+      margin: 0;
+      font-weight: 600;
+      font-size: 16px;
+      display: inline-block;
+      line-height: 150%;
+      span {
+        white-space: nowrap;
+        display: inline-block;
+      }
+      .check-reg {
+        display: none;
+        @include md-screen {
+          display: block;
+        }
+      }
+    }
+  }
+  .content-area {
+    .p1 {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      color: #858d9f;
+      margin: 0;
+      letter-spacing: 1.2px;
+    }
+    .heading-style {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 120%;
+      margin: 8px 0 16px;
+      margin-bottom: 16px;
+
+      @include md-screen {
+        font-size: 32px;
+      }
+
+      @include lg-screen {
+        margin-bottom: 24px;
+      }
+    }
+    .p2 {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 150%;
+      margin: 0;
+    }
+  }
+  .content-img {
+    margin-top: 24px;
+    text-align: center;
+
+    svg {
+      vertical-align: middle;
+      width: 600px;
+      height: 274px;
+    }
+  }
+
+  .access-area {
+    margin-top: 40px;
+    text-align: center;
+    &-title {
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 120%;
+      color: #141415;
+      margin: 0 0 24px;
+
+      @include md-screen {
+        font-size: 32px;
+      }
+    }
+    @include lg-screen {
+      margin-top: 80px;
+    }
+  }
+}
+
+// customers section start
+
+.customers {
+  overflow: hidden;
+  max-width: 1120px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 40px 0;
+
+  @include sm-screen {
+    padding: 40px 0 78px;
+  }
+  @include md-screen {
+    padding: 60px 0 98px;
+  }
+  @include lg-screen {
+    padding: 80px 0 120px;
+  }
+}
+// customers section start
+
+.review {
+  background: linear-gradient(180deg, #003bff -44.46%, #99caff 100.03%);
+  text-align: center;
+  padding: 60px 0 40px;
+
+  @include lg-screen {
+    padding: 120px 0 80px;
+  }
+  &-wrapper {
+    padding: 0 40px;
+    @include lg-screen {
+      padding: 0;
+    }
+    .title-style {
+      font-weight: 550;
+      font-size: 32px;
+      line-height: 120%;
+      color: var(--white-color);
+      margin: 0 0 24px;
+      @include md-screen {
+        font-size: 40px;
+      }
+    }
+    .shipping-btn {
+      background: #0061ff;
+      width: 100%;
+      margin-bottom: 40px;
+      @include md-screen {
+        width: unset;
+      }
+      &:hover {
+        color: var(--white-color);
+        background-color: #004eff;
+      }
+    }
+
+    &-content {
+      color: var(--white-color);
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 120%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .margin-4 {
+        margin: 0 4px;
+
+        .svg-inline--fa {
+          display: var(--fa-display, inline-block);
+          height: 1em;
+          overflow: visible;
+          vertical-align: 1px;
+        }
+        .styles_icon__qL_wc {
+          color: #ffc107;
+          font-size: 14px;
+          margin: -2px;
+        }
+      }
+    }
+    &-logo {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.style-button {
+  width: unset;
+  //   background-color: #0061ff;
+  line-height: 16px;
+  padding: 0 24px;
+  border: none;
+  font-size: 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  min-height: 48px;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  cursor: pointer;
+}

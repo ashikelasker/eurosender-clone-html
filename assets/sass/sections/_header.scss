@@ -1,0 +1,253 @@
+.header-notice {
+  display: flex;
+  justify-content: center;
+  padding: 12px 32px;
+  background-color: var(--white-color);
+
+  svg {
+    color: var(--primary-color);
+    width: 4px;
+    margin-left: 8px;
+  }
+
+  a {
+    color: var(--dark-color);
+    font-size: 14px;
+    font-weight: 400;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+nav.header-nav {
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 2px 4px #1746801a;
+  padding: 0 32px;
+  align-items: center;
+  z-index: 1000;
+  height: 74px;
+  //   background: green;
+  transition: background-color 0.3s ease-in-out;
+
+  a.header-nav-logo {
+    width: 150px;
+  }
+
+  ul.header-nav-menu {
+    display: flex;
+    align-items: center;
+
+    li {
+      position: relative;
+      a {
+        display: block;
+        flex: 0 1 1px;
+        white-space: nowrap;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 25px 16px;
+        color: #141415;
+        border-radius: 4px;
+        transition: all 0.1s linear;
+        font-weight: 700;
+
+        &.featured-menu-item {
+          background-color: var(--secondary-color);
+          color: #fff !important;
+          line-height: 16px;
+          padding: 0 24px;
+          border: none;
+          font-size: 14px;
+          border-radius: 6px;
+          font-weight: 600;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 48px;
+          transition: all 0.2s ease-in-out;
+          position: relative;
+          cursor: pointer;
+        }
+
+        &.settings-menu-item {
+          padding: 0 0 0 10px;
+          svg {
+            transform: translateY(-3px);
+            width: 22px;
+          }
+
+          &:hover {
+            color: initial;
+          }
+        }
+
+        &:hover {
+          color: #5b6271;
+        }
+      }
+
+      //   Dropdown er kaj
+
+      & .c-dropdown-wrapper {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+      }
+
+      //   Global dropdown style
+      & .c-dropdown-style {
+        background-color: #fff;
+        border-radius: 4px;
+        padding-left: 0;
+        box-shadow: 0 4px 10px #17468026;
+        min-width: 240px;
+
+        li {
+          a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            color: #000;
+            padding: 12px 24px;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 200;
+
+            i {
+              font-size: 10px;
+              color: #acacac;
+            }
+          }
+        }
+
+        a:hover {
+          background-color: #f3f6fb;
+        }
+      }
+
+      &.has-c-dropdown {
+        ul.c-dropdown-menu {
+          margin-top: 7px;
+
+          //   li {
+          //     a {
+          //       color: #000;
+          //       padding: 12px 24px;
+          //       font-size: 14px;
+          //       line-height: 24px;
+          //       font-weight: 200;
+          //     }
+          //   }
+
+          & > .has-c-second-dropdown {
+            position: relative;
+            // a {
+            //   display: flex;
+            //   justify-content: space-between;
+            //   align-items: center;
+            //   i {
+            //     font-size: 10px;
+            //     color: #acacac;
+            //   }
+            // }
+
+            & > .c-dropdown-second-menu {
+              display: none;
+              position: absolute;
+              left: 99%;
+              top: 0;
+            }
+
+            &:hover {
+              .c-dropdown-second-menu {
+                display: block;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          div.c-dropdown-wrapper:not(.settings-dropdown-wrapper) {
+            display: block;
+          }
+        }
+
+        //   -------------- settings cee
+        & > .settings-dropdown-wrapper {
+          display: block;
+          left: auto;
+          right: 0;
+
+          & > .c-dropdown-menu {
+            margin-top: 30px !important;
+
+            li {
+              a {
+                padding: 20px 24px;
+                div {
+                  i {
+                    width: 24px;
+                    color: #000;
+                    font-size: 17px;
+                    margin-right: 16px;
+                  }
+                }
+
+                &.business-switch {
+                  border-top: 1px solid #d8dde7;
+                  padding: 14px 24px;
+
+                  span {
+                    font-weight: 700;
+                    font-size: 14px;
+                    color: #141415;
+                  }
+
+                  .c-switch {
+                    width: 24px;
+                    height: 18px;
+                    display: block;
+                    border-radius: 21px;
+                    background-color: #858d9f;
+                    position: relative;
+                    transition: position 0.1s;
+
+                    &::after {
+                      content: "";
+                      width: 14px;
+                      height: 14px;
+                      display: block;
+                      background-color: #fff;
+                      border-radius: 50%;
+                      position: absolute;
+                      left: 0;
+                      margin: 1.8px;
+                    }
+
+                    &.switch-on {
+                      background-color: var(--primary-color);
+
+                      &::after {
+                        left: auto;
+                        right: 0;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

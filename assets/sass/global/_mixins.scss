@@ -1,0 +1,34 @@
+//Media Breakpoint for Each Device
+
+//Small Screen (min-width: 576)
+@mixin sm-screen {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+//Medium Screen (min-width: 768)
+@mixin md-screen {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+// Large Screen (min-width: 992)
+
+@mixin lg-screen {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+// Large Screen (min-width: 1200)
+@mixin xl-screen {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+//Xtra Large Screen (min-width: 1366)
+@mixin xxxl-screen {
+  @media screen and (min-width: 1366px) {
+    @content;
+  }
+}
