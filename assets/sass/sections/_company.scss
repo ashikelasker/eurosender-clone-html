@@ -73,6 +73,222 @@
 
 ////////////  Eurosender in number   /////
 
+section.timeline {
+  padding: 24px 20px;
+  overflow: hidden;
+  background-color: #fff;
+  @include md-screen {
+    padding: 40px 20px;
+  }
+  @include lg-screen {
+    padding: 60px 20px;
+  }
+  .section-heading {
+    color: #141415;
+    margin: 0;
+    margin-bottom: 0px;
+    font-size: 26px;
+    span {
+      display: block;
+      line-height: 18px;
+      color: #007bff;
+      letter-spacing: 0.36em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 0;
+      font-size: 14px;
+      @include md-screen {
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+      @include lg-screen {
+        line-height: 22px;
+      }
+    }
+  }
+  .timeline-heading {
+    margin-bottom: 40px !important;
+    font-weight: 600;
+    @include md-screen {
+      text-align: center;
+      font-size: 38px !important;
+      font-weight: 600;
+    }
+  }
+
+  .delivery-system {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 50px;
+
+    @include md-screen {
+      transform: translateX(40px);
+      justify-content: center;
+      grid-template-columns: 260px 260px;
+      grid-row-gap: 92px;
+    }
+    @include lg-screen {
+      transform: translateX(55px);
+      grid-template-columns: 266px 266px 266px;
+      grid-row-gap: 92px;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 2px;
+      left: 23px;
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2' height='51' fill='none'%3E%3Cpath stroke='%23B6BFCD' stroke-width='2' stroke-linecap='round' stroke-dasharray='0.01 7' d='M1 49.667v-48'/%3E%3C/svg%3E");
+      @include md-screen {
+        display: none;
+      }
+    }
+
+    .item-1 {
+      display: flex;
+      position: relative;
+      // &:first-child() {
+      //   order: 1;
+      // }
+      &:nth-child(3) {
+        @include md-screen {
+          &::before {
+            width: 50%;
+          }
+        }
+      }
+      &:nth-child(6) {
+        @include lg-screen {
+          &::before {
+            width: 50%;
+          }
+        }
+      }
+      &:nth-child(7) {
+        order: 8;
+
+        @include md-screen {
+          order: 7;
+        }
+        @include lg-screen {
+          order: 7;
+          &::before {
+            width: 88%;
+          }
+        }
+      }
+      &:nth-child(8) {
+        order: 7;
+        &::before {
+          display: none;
+        }
+
+        @include md-screen {
+          order: 8;
+          &::before {
+            width: 50%;
+            display: block;
+          }
+        }
+        @include lg-screen {
+          order: 7;
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+
+      .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: linear-gradient(180deg, #007bff, #003bff);
+        color: #fff;
+        font-size: 16px;
+        width: 48px;
+        height: 48px;
+        position: relative;
+        z-index: 1;
+        @include md-screen {
+          margin-bottom: 16px;
+        }
+        .svg-inline--fa.fa-w-14 {
+          width: 0.875em;
+        }
+        .svg-inline--fa {
+          display: inline-block;
+          font-size: inherit;
+          height: 1em;
+          vertical-align: -0.125em;
+        }
+      }
+      .text {
+        margin-left: 10px;
+        @include md-screen {
+          margin: initial;
+        }
+        .style-1 {
+          margin: 0;
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 20px;
+          color: #37383c;
+          text-transform: uppercase;
+        }
+        .style-2 {
+          max-width: 240px;
+          margin: 0;
+          font-size: 16px;
+          line-height: 24px;
+          color: #5b6271;
+        }
+      }
+      &::before {
+        left: 24px;
+        width: 25%;
+        height: 2px;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='210' height='2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23B6BFCD' stroke-width='2' stroke-linecap='round' stroke-dasharray='0.01 7' d='M1 1h208'/%3E%3C/svg%3E");
+
+        @include md-screen {
+          display: block;
+          transform: none;
+          width: 100%;
+        }
+      }
+      // &::after {
+      //   right: -20px;
+      //   width: 50%;
+      //   height: calc(100% + 94px);
+      //   background-size: contain;
+      //   background-repeat: no-repeat;
+      //   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='103' height='202' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 201c55.228 0 100-44.772 100-100S56.728 1 1.5 1' stroke='%23B6BFCD' stroke-width='2' stroke-linecap='round' stroke-dasharray='0.01 7'/%3E%3C/svg%3E");
+      // }
+
+      @include md-screen {
+        flex-direction: column;
+        &::before,
+        &::after {
+          position: absolute;
+          content: "";
+          top: 24px;
+        }
+      }
+      @include lg-screen {
+        &:nth-child(2)::before {
+          width: 100%;
+        }
+        &:nth-child(2)::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+////////////  Eurosender in number   /////
+
 .stats {
   padding: 24px 20px;
   background-color: #f8fbff;
@@ -96,5 +312,85 @@
       font-size: 36px;
       line-height: 46px;
     }
+  }
+  .user-reg {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-bottom: px;
+    @include xl-screen {
+      justify-self: auto;
+    }
+    .icon {
+      font-size: 30px;
+      color: #b6bfcd;
+      position: relative;
+      min-width: 37px;
+      display: flex;
+      justify-content: center;
+
+      .svg-inline--fa {
+        overflow: visible;
+        display: inline-block;
+        font-size: inherit;
+        height: 1em;
+      }
+      .fa-w-14 {
+        width: 0.875em;
+      }
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      margin-left: 16px;
+      .value {
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 30px;
+        color: #007bff;
+      }
+      .value-2 {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        color: #5b6271;
+      }
+    }
+  }
+
+  .about-mission {
+    margin-top: 48px;
+    .euro-btn {
+      background: #141415;
+
+      .button-icon {
+        width: 20px;
+        margin-left: 8px;
+        float: right;
+
+        .fa-w-14 {
+          width: 0.875em;
+        }
+        .svg-inline--fa {
+          overflow: visible;
+          display: inline-block;
+          font-size: inherit;
+          height: 1em;
+          vertical-align: -0.125em;
+        }
+      }
+    }
+  }
+}
+
+////////////  address  /////
+
+.address-bg {
+  background-color: #37383c;
+  .address {
+    color: #d8dde7;
+    padding: 24px 20px;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
